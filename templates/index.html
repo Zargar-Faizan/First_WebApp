@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First Web App</title>
+</head>
+
+<body>
+<h1>The content of the document is Html</h1>
+{{ key1 }}
+<a href="{% url 'result' %}">Click here for results</a>
+<!--#creating form-->
+
+<form action="{% url 'result' %}">
+    {% csrf_token %}
+<!--    <input type = "text", name="user_age" placeholder="enter age"><br>-->
+    <textarea cols="100" rows="10" name="article"></textarea>
+    <input type = "submit", name="submit", value="Submit">
+</form>
+
+</body>
+
+</html>
